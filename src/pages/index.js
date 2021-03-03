@@ -1,25 +1,46 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const capton = {
+  fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+  fontSize: "0.75rem",
+  textTransform: "uppercase"
+};
+const imageGrid = {
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr 1fr 1fr",
+  gap: "1rem",
+  marginBottom: 16
+}
+
 
 const IndexPage = () => (
   <Layout>
     <StaticQuery
     query={query}
     render={data => (
-      <ul>
+      <div style={imageGrid}>
         {data.allStrapiArtwork.edges.map(artwork => (
-          <li key={artwork.node.strapiId}>{artwork.node.Title}, {artwork.node.Date}</li>
+          <>
+            <div>
+              <GatsbyImage 
+                image={artwork.node.Image.localFile.childImageSharp.gatsbyImageData}
+                alt={artwork.node.Image.alternativeText}
+              />
+              <span style={capton}>{artwork.node.Title}, {artwork.node.Date}</span></br>
+              <span style={capton}>{artwork.node.Medium}</span>
+            </div>
+          </>
         ))}
-      </ul>
+      </div>
     )}
   />
-  <img src="https://api.stefanknap.art{allStrapiArtwork.Image.url}" />
-  </Layout>
+</Layout>
 )
 
 const query = graphql`
@@ -27,20 +48,22 @@ const query = graphql`
     allStrapiArtwork {
       edges {
         node {
-          id
-          Title
           Date
           Medium
-          Price
-          Location
-          Dimensions
+          Title
+          id
           Image {
-            url
+            alternativeText
+            localFile {
+              childImageSharp {
+                gatsbyImageData(quality: 80, width: 500, height: 500)
+              }
+            }
           }
         }
       }
     }
   }
-`;
+`
 
 export default IndexPage

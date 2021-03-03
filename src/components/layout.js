@@ -37,9 +37,10 @@ const Layout = ({ children }) => {
         <footer
           style={{
             marginTop: `2rem`,
+            fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif"
           }}
         >
-          © {new Date().getFullYear()}, Estate of Stefan Knapp
+          © {new Date().getFullYear()} Estate of Stefan Knapp
         </footer>
       </div>
     </>
