@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const capton = {
+const caption = {
   fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
   fontSize: "0.75rem",
   textTransform: "uppercase"
@@ -32,8 +32,8 @@ const IndexPage = () => (
                 image={artwork.node.Image.localFile.childImageSharp.gatsbyImageData}
                 alt={artwork.node.Image.alternativeText}
               />
-              <span style={capton}>{artwork.node.Title}, {artwork.node.Date}</span></br>
-              <span style={capton}>{artwork.node.Medium}</span>
+              <span style={caption}>{artwork.node.Title}, {artwork.node.Date}</span></br>
+              <span style={caption}>{artwork.node.Medium}</span>
             </div>
           </>
         ))}
