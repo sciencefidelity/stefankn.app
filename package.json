@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Stefan Knapp Archive",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The future home of the archive of artist Stafan Knapp",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Matt Cook <sciencefidelity@gmail.com>",
   "dependencies": {
     "gatsby": "^3.0.0",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
