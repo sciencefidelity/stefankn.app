@@ -26,17 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/knapp-icon.png`,
-      },
-    },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: `https://api.stefanknapp.art`,
-        queryLimit: 5000,
-        contentTypes: [
-          `artwork`,
-        ],
+        icon: `src/images/icon.png`,
       },
     },
   ],
