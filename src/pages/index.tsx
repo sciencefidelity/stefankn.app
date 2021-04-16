@@ -1,5 +1,5 @@
 import * as React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -18,7 +18,7 @@ const IndexPage = () => (
                     image={artwork.node.Image.childImageSharp.gatsbyImageData}
                     alt=""
                   />
-                  <span className="caption">{artwork.node.Title}, {artwork.node.Date}</span><br />
+                  <span className="caption">{artwork.node.Title}, {artwork.node.Date}</span>
                   <span className="caption">{artwork.node.Medium}</span>
                 </div>
               </>
