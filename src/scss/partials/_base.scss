@@ -37,3 +37,13 @@ footer {
   max-width: 960px;
   padding: 2.32rem 1.74rem;
 }
+.caption {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 16px;
+}

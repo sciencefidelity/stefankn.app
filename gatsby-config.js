@@ -29,5 +29,15 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://api.stefanknapp.art`,
+        queryLimit: 5000,
+        contentTypes: [
+          `artwork`,
+        ],
+      },
+    },
   ],
 }
