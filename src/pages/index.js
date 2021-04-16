@@ -22,25 +22,25 @@ const imageGrid = {
 const IndexPage = () => (
   <Layout>
     <StaticQuery
-    query={query}
-    render={data => (
-      <div style={imageGrid}>
-        {data.allStrapiArtwork.edges.map(artwork => (
-          <>
-            <div>
-              <GatsbyImage 
-                image={artwork.node.Image.localFile.childImageSharp.gatsbyImageData}
-                alt={artwork.node.Image.alternativeText}
-              />
-              <span style={caption}>{artwork.node.Title}, {artwork.node.Date}</span></br>
-              <span style={caption}>{artwork.node.Medium}</span>
-            </div>
-          </>
-        ))}
-      </div>
-    )}
-  />
-</Layout>
+      query={query}
+      render={data => (
+        <div style={imageGrid}>
+          {data.allStrapiArtwork.edges.map(artwork => (
+            <>
+              <div>
+                <GatsbyImage 
+                  image={artwork.node.Image.localFile.childImageSharp.gatsbyImageData}
+                  alt={artwork.node.Image.alternativeText}
+                />
+                <span style={caption}>{artwork.node.Title}, {artwork.node.Date}</span>
+                <span style={caption}>{artwork.node.Medium}</span>
+              </div>
+            </>
+          ))}
+        </div>
+      )}
+    />
+  </Layout>
 )
 
 const query = graphql`
