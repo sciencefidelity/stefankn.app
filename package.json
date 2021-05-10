@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "stefan-knapp-archive",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Archive of the estate of artist Stefan Knapp.",
+  "version": "0.0.1",
+  "author": "Matt Cook <matt@sciencefidelity.co.uk>",
+  "license": "UNLICENSED",
   "dependencies": {
     "babel-preset-gatsby": "^1.3.0",
     "gatsby": "^3.2.1",
