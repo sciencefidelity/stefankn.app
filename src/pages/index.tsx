@@ -11,10 +11,10 @@ const IndexPage = () => (
         query={query}
         render={data => (
           <div className="imageGrid">
-            {data.allStrapiArtwork.edges.map(artwork => (
+            {data.allStrapiArtwork.edges.map((artwork: any) => (
               <>
                 <div>
-                  <GatsbyImage 
+                  <GatsbyImage
                     image={artwork.node.Image.childImageSharp.gatsbyImageData}
                     alt=""
                   />
