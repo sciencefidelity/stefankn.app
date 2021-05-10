@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "biographies",
+  "info": {
+    "name": "Biography"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Biography": {
+      "type": "text"
+    },
+    "Excerpt": {
+      "type": "string"
+    },
+    "Born": {
+      "type": "date"
+    },
+    "Died": {
+      "type": "date"
+    },
+    "Photos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
