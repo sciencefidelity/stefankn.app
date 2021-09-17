@@ -1,7 +1,3 @@
-# Stefan Knapp Archive
+# Centenary: Stefan Knapp
 
-Front end of the [Stefan Knapp Archive](https://archive.stefanknapp.art).
-
-Backend is [here](https://github.com/sciencefidelity/knapp-api).
-
-Built with [Gatsby](https://www.gatsbyjs.com/).
+Microsite for the retrospective exhibition of the work of artist Stefan Knapp at Mid Wales Arts.
