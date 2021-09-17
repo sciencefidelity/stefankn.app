@@ -1,0 +1,17 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\ngatsby build"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\ngatsby clean"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\ngatsby develop -H 0.0.0.0"
+    }
+  },
+  "identifier" : "765F9872-B697-4190-89DC-0E37F1147C81"
+}
